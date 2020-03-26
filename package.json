@@ -1,44 +1,72 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-antoine",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My opinionated Gatsby.js starter template",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": {
+    "name": "Antoine Rousseau",
+    "email": "antoine@rousseau.im",
+    "url": "https://antoine.rousseau.im"
+  },
   "dependencies": {
+    "@babel/preset-typescript": "^7.9.0",
+    "@bugsnag/js": "^6.5.2",
+    "@bugsnag/plugin-react": "^6.5.0",
+    "@hot-loader/react-dom": "^16.13.0",
+    "@types/aws-lambda": "^8.10.46",
+    "@types/node": "^12.12.31",
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-helmet": "^5.0.15",
+    "@types/standard-http-error": "^2.0.0",
+    "@types/styled-components": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
+    "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.2.48",
-    "gatsby-plugin-offline": "^3.0.41",
-    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-netlify": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
-    "prop-types": "^15.7.2",
+    "http-proxy-middleware": "^1.0.3",
+    "netlify-lambda": "^1.6.3",
+    "prettier": "^2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "source-map-support": "^0.5.16",
+    "standard-http-error": "^2.0.1",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3",
+    "webpack-node-externals": "^1.7.2"
   },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "develop": "rm -rf .cache && rm -rf public/ && gatsby develop",
+    "lambda": "NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
+    "lint": "tsc --skipLibCheck ; eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "build": "rm -rf .cache && rm -rf public/ && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine/issues"
   }
 }
