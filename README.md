@@ -5,10 +5,11 @@ My opinionated [Gatsby.js](https://www.gatsbyjs.org/) starter template.
 It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default), and adds:
 
 - [Hot reloading](https://github.com/hot-loader/react-dom)
-- [TypeScript](https://www.typescriptlang.org/)
+- [TypeScript](https://www.typescriptlang.org/) & Gatsby types
 - [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
 - [Netlify](https://www.netlify.com/) config (including TypeScript Netlify functions)
 - [Bugsnag](https://www.bugsnag.com/)
+- [Styled Components](https://styled-components.com/)
 
 ## Requirements
 

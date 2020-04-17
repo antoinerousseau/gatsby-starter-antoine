@@ -6,6 +6,12 @@
 
 const path = require("path")
 
+exports.sourceNodes = require("./src/gatsby/sourceNodes").default
+exports.onCreatePage = require("./src/gatsby/onCreatePage").default
+exports.createPages = require("./src/gatsby/createPages").default
+exports.onPostBuild = require("./src/gatsby/onPostBuild").default
+
+// hot reloading:
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   const alias = {
     src: path.resolve(__dirname, "src"),

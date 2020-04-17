@@ -1,23 +1,23 @@
 import "source-map-support/register"
 import HttpError from "standard-http-error"
-import bugsnagJs from "@bugsnag/js"
+import Bugsnag from "@bugsnag/js"
 
 import dotenv from "dotenv"
 dotenv.config()
 
-const bugsnag = bugsnagJs({
+Bugsnag.start({
   apiKey: process.env.GATSBY_BUGSNAG,
   releaseStage: process.env.NODE_ENV,
-  notifyReleaseStages: ["production"],
+  enabledReleaseStages: ["production"],
   appVersion: process.env.COMMIT_REF || "local",
-  metaData: {
+  metadata: {
     deployUrl: process.env.DEPLOY_URL || "local",
   },
 })
 
 export const reportError = (error: NodeJS.ErrnoException | Error) =>
   new Promise((resolve, reject) => {
-    bugsnag.notify(error, null, (err, report) => (err ? reject(err) : resolve(report)))
+    Bugsnag.notify(error, null, (err, report) => (err ? reject(err) : resolve(report)))
   })
 
 export const respond = (statusCode: number, data: object = null) => ({

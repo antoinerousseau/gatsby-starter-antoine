@@ -1,7 +1,7 @@
 import HttpError from "standard-http-error"
+import Bugsnag from "@bugsnag/js"
 
 import api, { Payload, Query } from "src/helpers/api"
-import bugsnag from "src/helpers/bugsnag"
 
 const request = async <T>(method: string, name: string, params?: Payload | Query): Promise<T> =>
   api.request<T>(method, `/.netlify/functions/${name}`, params)
@@ -15,7 +15,7 @@ export default {
 
 export const handleError = (error: Error) => {
   if (!(error instanceof HttpError)) {
-    bugsnag.notify(error)
+    Bugsnag.notify(error)
   }
   alert("Erreur : " + error.message)
 }

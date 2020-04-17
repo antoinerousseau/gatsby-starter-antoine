@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
 import normalize from "./normalize"
@@ -41,11 +41,11 @@ const Container = styled.div`
   /* Write your custom root CSS here */
 `
 
-const Root: React.FC = ({ children }) => (
+const Page: React.FC = ({ children }) => (
   <Container>
     <GlobalStyles />
     <ErrorBoundary FallbackComponent={ErrorComponent}>{children}</ErrorBoundary>
   </Container>
 )
 
-export default Root
+export default Page

@@ -1,24 +1,17 @@
-import React from "react"
-import bugsnagJs from "@bugsnag/js"
-import bugsnagReact from "@bugsnag/plugin-react"
-import Report from "@bugsnag/browser/dist/types/bugsnag-core/report"
+import * as React from "react"
+import Bugsnag from "@bugsnag/js"
+import BugsnagReact from "@bugsnag/plugin-react"
 
-const beforeSend = (report: Report) => report.errorClass !== "ChunkLoadError"
-
-const bugsnag = bugsnagJs({
+Bugsnag.start({
   apiKey: process.env.GATSBY_BUGSNAG,
   releaseStage: process.env.NODE_ENV,
-  notifyReleaseStages: ["production"],
+  enabledReleaseStages: ["production"],
   appVersion: process.env.GATSBY_RELEASE,
-  metaData: {
+  metadata: {
     deployUrl: process.env.GATSBY_DEPLOY_URL,
     deployDate: process.env.GATSBY_DEPLOY_DATE,
   },
-  collectUserIp: false,
-  beforeSend,
+  plugins: [new BugsnagReact(React)],
 })
-bugsnag.use(bugsnagReact, React)
 
-export const ErrorBoundary = bugsnag.getPlugin("react")
-
-export default bugsnag
+export const ErrorBoundary = Bugsnag.getPlugin("react")

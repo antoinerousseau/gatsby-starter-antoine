@@ -4,6 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-import wrapper from "src/gatsby/wrapPageElement"
-
-export const wrapPageElement = wrapper
+exports.wrapPageElement = require("./src/gatsby/wrapPageElement").default

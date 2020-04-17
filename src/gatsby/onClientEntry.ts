@@ -1,4 +1,4 @@
-const onClientEntry = (): Promise<any> => {
+const onClientEntry = () => {
   const polyfills: Promise<any>[] = []
 
   if (typeof fetch === "undefined") {

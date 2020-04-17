@@ -4,8 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import wrapper from "src/gatsby/wrapPageElement"
-import entry from "src/gatsby/onClientEntry"
-
-export const wrapPageElement = wrapper
-export const onClientEntry = entry
+exports.wrapPageElement = require("./src/gatsby/wrapPageElement").default
+exports.onClientEntry = require("./src/gatsby/onClientEntry").default

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
 
-import Root from "src/layout/root"
+import Page from "src/layout/page"
 
-const wrapPageElement = ({ element }): ReactNode => <Root>{element}</Root>
+const wrapPageElement = ({ element }): ReactNode => <Page>{element}</Page>
 
 export default wrapPageElement

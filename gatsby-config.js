@@ -1,4 +1,5 @@
 require("dotenv").config()
+require("ts-node").register()
 
 if (!process.env.GATSBY_BUGSNAG) {
   throw new Error("Missing GATSBY_BUGSNAG environment variable. Did you create a .env file?")
