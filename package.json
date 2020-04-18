@@ -3,6 +3,7 @@
   "private": true,
   "description": "My opinionated Gatsby.js starter template",
   "version": "1.0.0",
+  "keywords": ["gatsby", "starter", "gatsby.js", "typescript", "template"],
   "author": {
     "name": "Antoine Rousseau",
     "email": "antoine@rousseau.im",
@@ -55,13 +56,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "develop": "rm -rf .cache && rm -rf public/ && gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "lambda": "NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
     "lint": "tsc --skipLibCheck ; eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "build": "rm -rf .cache && rm -rf public/ && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
+    "build": "gatsby clean && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1"
   },
   "repository": {
     "type": "git",
