@@ -1,11 +1,14 @@
 require("dotenv").config()
 require("ts-node").register()
 
-if (!process.env.GATSBY_BUGSNAG) {
-  throw new Error("Missing GATSBY_BUGSNAG environment variable. Did you create a .env file?")
-}
-
 const { createProxyMiddleware } = require("http-proxy-middleware")
+
+if (!process.env.GATSBY_BUGSNAG) {
+  console.warn("Bugsnag requires an API key. Did you mean to add it?")
+}
+if (!process.env.TZ) {
+  console.warn("You should define a timezone through a TZ environment variable.")
+}
 
 // we need these in the browser for Bugsnag:
 process.env.GATSBY_DEPLOY_URL = process.env.DEPLOY_URL || "local" // from Netlify

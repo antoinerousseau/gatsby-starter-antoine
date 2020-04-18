@@ -2,16 +2,22 @@ import * as React from "react"
 import Bugsnag from "@bugsnag/js"
 import BugsnagReact from "@bugsnag/plugin-react"
 
-Bugsnag.start({
-  apiKey: process.env.GATSBY_BUGSNAG,
-  releaseStage: process.env.NODE_ENV,
-  enabledReleaseStages: ["production"],
-  appVersion: process.env.GATSBY_RELEASE,
-  metadata: {
-    deployUrl: process.env.GATSBY_DEPLOY_URL,
-    deployDate: process.env.GATSBY_DEPLOY_DATE,
-  },
-  plugins: [new BugsnagReact(React)],
-})
+const apiKey = process.env.GATSBY_BUGSNAG
 
-export const ErrorBoundary = Bugsnag.getPlugin("react")
+if (apiKey) {
+  Bugsnag.start({
+    apiKey,
+    releaseStage: process.env.NODE_ENV,
+    enabledReleaseStages: ["production"],
+    appVersion: process.env.GATSBY_RELEASE,
+    metadata: {
+      deployUrl: process.env.GATSBY_DEPLOY_URL,
+      deployDate: process.env.GATSBY_DEPLOY_DATE,
+    },
+    plugins: [new BugsnagReact(React)],
+  })
+} else {
+  console.warn("Missing Bugsnag API key: no error reporting or boundary are set.")
+}
+
+export const ErrorBoundary = apiKey ? Bugsnag.getPlugin("react") : null

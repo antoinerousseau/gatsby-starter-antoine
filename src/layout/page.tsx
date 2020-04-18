@@ -44,7 +44,7 @@ const Container = styled.div`
 const Page: React.FC = ({ children }) => (
   <Container>
     <GlobalStyles />
-    <ErrorBoundary FallbackComponent={ErrorComponent}>{children}</ErrorBoundary>
+    {ErrorBoundary ? <ErrorBoundary FallbackComponent={ErrorComponent}>{children}</ErrorBoundary> : children}
   </Container>
 )
 
