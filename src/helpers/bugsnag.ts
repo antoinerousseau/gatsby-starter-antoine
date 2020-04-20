@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import Bugsnag from "@bugsnag/js"
 import BugsnagReact from "@bugsnag/plugin-react"
 

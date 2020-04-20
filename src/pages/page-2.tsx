@@ -1,9 +1,9 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "src/layout"
 
-const SecondPage: GatsbyPage = () => (
+const SecondPage: React.FC<PageProps> = () => (
   <Layout title="Page two">
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>

@@ -1,10 +1,10 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "src/layout"
 import Image from "src/components/Image"
 
-const Home: GatsbyPage = () => (
+const Home: React.FC<PageProps> = () => (
   <Layout title="Home">
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
