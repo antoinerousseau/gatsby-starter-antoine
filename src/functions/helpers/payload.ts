@@ -1,5 +1,4 @@
 import "source-map-support/register"
-import "dotenv/config"
 import HttpError from "standard-http-error"
 import Bugsnag from "@bugsnag/js"
 
