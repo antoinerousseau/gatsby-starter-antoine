@@ -31,6 +31,7 @@
     "@typescript-eslint/parser": "^2.29.0",
     "babel-plugin-inline-dotenv": "^1.5.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
@@ -64,8 +65,8 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby clean && gatsby develop",
-    "lambda": "NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
-    "lint": "tsc --skipLibCheck ; eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
+    "lambda": "cross-env NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
+    "lint": "tsc --skipLibCheck && eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "build": "gatsby clean && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
     "serve": "gatsby serve",
