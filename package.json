@@ -2,18 +2,32 @@
   "name": "gatsby-starter-antoine",
   "private": true,
   "description": "My opinionated Gatsby.js starter template",
+  "license": "MIT",
   "version": "1.0.0",
-  "keywords": [
-    "gatsby",
-    "starter",
-    "gatsby.js",
-    "typescript",
-    "template"
-  ],
+  "keywords": ["gatsby", "starter", "gatsby.js", "typescript", "template"],
   "author": {
     "name": "Antoine Rousseau",
     "email": "antoine@rousseau.im",
     "url": "https://antoine.rousseau.im"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine"
+  },
+  "bugs": {
+    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine/issues"
+  },
+  "scripts": {
+    "develop": "gatsby clean && gatsby develop",
+    "lambda": "cross-env NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
+    "lint": "tsc --skipLibCheck && eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "build": "gatsby clean && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1"
+  },
+  "engines": {
+    "node": ">=10.0"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.9.0",
@@ -61,22 +75,5 @@
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3",
     "webpack-node-externals": "^1.7.2"
-  },
-  "license": "MIT",
-  "scripts": {
-    "develop": "gatsby clean && gatsby develop",
-    "lambda": "cross-env NODE_ENV=development netlify-lambda serve src/functions --config webpack.functions.js --timeout 30",
-    "lint": "tsc --skipLibCheck && eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "build": "gatsby clean && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine"
-  },
-  "bugs": {
-    "url": "https://github.com/antoinerousseau/gatsby-starter-antoine/issues"
   }
 }
