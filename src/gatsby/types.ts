@@ -35,7 +35,7 @@ export interface Reporter {
   panic: (message: string, error?: Error) => void
 }
 
-export type GatsbyGraphQL = (taggedQuery: string) => { errors: Error; data: any }
+export type GatsbyGraphQL = (taggedQuery: string) => Promise<{ errors: Error; data: any }>
 
 // https://www.gatsbyjs.org/docs/node-apis/#createSchemaCustomization
 export type GatsbyCreateSchema = (fns: { actions: GatsbyActions; reporter: Reporter }) => void
