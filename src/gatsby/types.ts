@@ -49,6 +49,9 @@ export type GatsbySourceNodes = (fns: {
   reporter: Reporter
 }) => void
 
+// https://www.gatsbyjs.org/docs/node-apis/#onCreateNode
+export type GatsbyOnCreateNode = (fns: { node: GatsbyNode; actions: GatsbyActions }) => void
+
 // https://www.gatsbyjs.org/docs/node-apis/#createPages
 export type GatsbyCreatePages = (fns: { graphql: GatsbyGraphQL; actions: GatsbyActions }) => void
 

@@ -7,6 +7,7 @@
 const path = require("path")
 
 exports.sourceNodes = require("./src/gatsby/sourceNodes").default
+exports.onCreateNode = require("./src/gatsby/onCreateNode").default
 exports.onCreatePage = require("./src/gatsby/onCreatePage").default
 exports.createPages = require("./src/gatsby/createPages").default
 exports.onPostBuild = require("./src/gatsby/onPostBuild").default
