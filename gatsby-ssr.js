@@ -5,4 +5,4 @@
  */
 
 exports.onRenderBody = require("./src/gatsby/onRenderBody").default
-exports.wrapPageElement = require("./src/gatsby/wrapPageElement").default
+exports.wrapPageElement = require("./src/layout/page").default
