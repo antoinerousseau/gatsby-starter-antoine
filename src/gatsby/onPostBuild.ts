@@ -1,6 +1,6 @@
-import { GatsbyOnPostBuild } from "./types"
+import type { GatsbyNode } from "gatsby"
 
-const onPostBuild: GatsbyOnPostBuild = async () => {
+const onPostBuild: GatsbyNode["onPostBuild"] = async () => {
   // https://www.gatsbyjs.org/docs/node-apis/#onPostBuild
 }
 

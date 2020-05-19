@@ -1,4 +1,6 @@
-const onClientEntry = () => {
+import type { GatsbyBrowser } from "gatsby"
+
+const onClientEntry: GatsbyBrowser["onClientEntry"] = () => {
   const polyfills: Promise<any>[] = []
 
   if (typeof fetch === "undefined") {

@@ -1,6 +1,6 @@
-import { GatsbySourceNodes } from "./types"
+import type { GatsbyNode } from "gatsby"
 
-const sourceNodes: GatsbySourceNodes = async () => {
+const sourceNodes: GatsbyNode["sourceNodes"] = async () => {
   // https://www.gatsbyjs.org/docs/node-apis/#sourceNodes
 }
 

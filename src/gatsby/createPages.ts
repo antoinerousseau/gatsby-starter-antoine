@@ -1,6 +1,6 @@
-import { GatsbyCreatePages } from "./types"
+import type { GatsbyNode } from "gatsby"
 
-const createPages: GatsbyCreatePages = async () => {
+const createPages: GatsbyNode["createPages"] = async () => {
   // https://www.gatsbyjs.org/docs/node-apis/#createPages
 }
 

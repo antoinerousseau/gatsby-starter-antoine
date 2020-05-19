@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "src/layout"
 import Image from "src/components/Image"
 
-const Home: React.FC<PageProps> = () => (
+const Home: GatsbyPage = () => (
   <Layout title="Home">
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

@@ -1,3 +1,5 @@
+import type { GatsbyBrowser } from "gatsby"
+
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
@@ -36,16 +38,14 @@ const ErrorComponent: React.FC<FallbackProps> = () => (
   </ErrorContainer>
 )
 
-const Container = styled.div`
-  font-family: sans-serif;
-  /* Write your custom root CSS here */
-`
-
-const Page: React.FC = ({ children }) => (
-  <Container>
-    <GlobalStyles />
-    {ErrorBoundary ? <ErrorBoundary FallbackComponent={ErrorComponent}>{children}</ErrorBoundary> : children}
-  </Container>
-)
+const Page: GatsbyBrowser["wrapPageElement"] = ({ element }) => {
+  // https://www.gatsbyjs.org/docs/browser-apis/#wrapPageElement
+  return (
+    <>
+      <GlobalStyles />
+      {ErrorBoundary ? <ErrorBoundary FallbackComponent={ErrorComponent}>{element}</ErrorBoundary> : element}
+    </>
+  )
+}
 
 export default Page

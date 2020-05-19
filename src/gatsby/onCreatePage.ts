@@ -1,6 +1,6 @@
-import { GatsbyOnCreatePage } from "./types"
+import type { GatsbyNode } from "gatsby"
 
-const onCreatePage: GatsbyOnCreatePage = async () => {
+const onCreatePage: GatsbyNode["onCreatePage"] = async () => {
   // https://www.gatsbyjs.org/docs/node-apis/#onCreatePage
 }
 
