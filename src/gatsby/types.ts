@@ -20,11 +20,15 @@ export interface GatsbyActions {
   createPage: (page: GatsbyPage) => void
   deletePage: (page: GatsbyPage) => void
   createNode: (node: GatsbyNode) => void
-  createNodeField: (obj: {
-    node:GatsbyNode,
-    name:string,
-    value:string
-  }, plugin?:ActionPlugin, actionOptions?:ActionOptions) => void
+  createNodeField: (
+    obj: {
+      node: GatsbyNode
+      name: string
+      value: string
+    },
+    plugin?: ActionPlugin,
+    actionOptions?: ActionOptions
+  ) => void
   createRedirect: (opts: {
     fromPath: string
     isPermanent?: boolean
