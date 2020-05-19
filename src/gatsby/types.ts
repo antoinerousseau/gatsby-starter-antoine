@@ -20,6 +20,15 @@ export interface GatsbyActions {
   createPage: (page: GatsbyPage) => void
   deletePage: (page: GatsbyPage) => void
   createNode: (node: GatsbyNode) => void
+  createNodeField: (
+    obj: {
+      node: GatsbyNode
+      name: string
+      value: string
+    },
+    plugin?: ActionPlugin,
+    actionOptions?: ActionOptions
+  ) => void
   createRedirect: (opts: {
     fromPath: string
     isPermanent?: boolean
@@ -27,7 +36,12 @@ export interface GatsbyActions {
     toPath: string
   }) => void
 }
-
+interface ActionPlugin {
+  name: string
+}
+interface ActionOptions {
+  [key: string]: unknown
+}
 export interface Reporter {
   info: (message: string) => void
   warn: (message: string) => void
@@ -48,6 +62,9 @@ export type GatsbySourceNodes = (fns: {
   createNodeId: Function
   reporter: Reporter
 }) => void
+
+// https://www.gatsbyjs.org/docs/node-apis/#onCreateNode
+export type GatsbyOnCreateNode = (fns: { node: GatsbyNode; actions: GatsbyActions }) => void
 
 // https://www.gatsbyjs.org/docs/node-apis/#createPages
 export type GatsbyCreatePages = (fns: { graphql: GatsbyGraphQL; actions: GatsbyActions }) => void
