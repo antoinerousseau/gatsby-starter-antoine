@@ -20,6 +20,11 @@ export interface GatsbyActions {
   createPage: (page: GatsbyPage) => void
   deletePage: (page: GatsbyPage) => void
   createNode: (node: GatsbyNode) => void
+  createNodeField: (obj: {
+    node:GatsbyNode,
+    name:string,
+    value:string
+  }, plugin?:ActionPlugin, actionOptions?:ActionOptions) => void
   createRedirect: (opts: {
     fromPath: string
     isPermanent?: boolean
@@ -27,7 +32,12 @@ export interface GatsbyActions {
     toPath: string
   }) => void
 }
-
+interface ActionPlugin {
+  name: string
+}
+interface ActionOptions {
+  [key: string]: unknown
+}
 export interface Reporter {
   info: (message: string) => void
   warn: (message: string) => void
