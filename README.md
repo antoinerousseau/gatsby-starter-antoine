@@ -10,6 +10,7 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
 - [Netlify](https://www.netlify.com/) config (including TypeScript Netlify functions)
 - [Bugsnag](https://www.bugsnag.com/)
 - [Styled Components](https://styled-components.com/)
+ - `src` [import alias](https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9)
 
 ## Requirements
 
