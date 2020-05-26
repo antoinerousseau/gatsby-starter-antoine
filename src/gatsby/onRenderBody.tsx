@@ -4,7 +4,7 @@ import type { GatsbySSR } from "gatsby"
 
 const onRenderBody: GatsbySSR["onRenderBody"] = () => {
   // https://www.gatsbyjs.org/docs/ssr-apis/#onRenderBody
-  return null
+  return null // https://github.com/gatsbyjs/gatsby/issues/24229
 }
 
 export default onRenderBody

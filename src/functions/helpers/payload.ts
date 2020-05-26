@@ -26,7 +26,7 @@ export const reportError = (error: NodeJS.ErrnoException | Error) =>
     }
   })
 
-export const respond = (statusCode: number, data: object = null) => ({
+export const respond = (statusCode: number, data: Record<string, unknown> = null) => ({
   statusCode,
   body: JSON.stringify(data),
   headers: {

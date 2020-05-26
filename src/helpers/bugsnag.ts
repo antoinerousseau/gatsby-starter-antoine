@@ -20,4 +20,4 @@ if (apiKey) {
   console.warn("Missing Bugsnag API key: no error reporting or boundary are set.")
 }
 
-export const ErrorBoundary = apiKey ? Bugsnag.getPlugin("react") : null
+export const ErrorBoundary = apiKey ? Bugsnag.getPlugin("react")?.createErrorBoundary() : null

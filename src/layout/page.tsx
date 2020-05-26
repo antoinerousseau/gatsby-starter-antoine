@@ -19,12 +19,11 @@ const ErrorContainer = styled.div`
   }
 `
 
-// https://github.com/bugsnag/bugsnag-js/blob/next/packages/plugin-react/src/index.js#L9-L12
+// https://github.com/bugsnag/bugsnag-js/blob/v7.1.0/packages/plugin-react/types/bugsnag-plugin-react.d.ts
 interface FallbackProps {
   error: Error
-  info?: {
-    componentStack: string
-  }
+  info: React.ErrorInfo
+  clearError: () => void
 }
 
 const ErrorComponent: React.FC<FallbackProps> = () => (

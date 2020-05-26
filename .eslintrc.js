@@ -13,7 +13,7 @@ module.exports = {
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-no-target-blank": "off", // noopener ok but noreferrer no
+    "react/jsx-no-target-blank": ["error", { allowReferrer: true }],
   },
   settings: {
     react: {
@@ -25,9 +25,7 @@ module.exports = {
       files: ["**/*.ts", "**/*.tsx"],
       extends: ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"],
       rules: {
-        "@typescript-eslint/camelcase": "off",
-        "@typescript-eslint/interface-name-prefix": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-explicit-any": "off",
       },
     },

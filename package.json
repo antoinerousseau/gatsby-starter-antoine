@@ -33,7 +33,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=10.12.0"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.9.0",
@@ -47,13 +47,13 @@
     "@types/react-helmet": "^6.0.0",
     "@types/standard-http-error": "^2.0.0",
     "@types/styled-components": "^5.1.0",
-    "@typescript-eslint/eslint-plugin": "^2.29.0",
-    "@typescript-eslint/parser": "^2.29.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
     "babel-plugin-inline-dotenv": "^1.5.0",
     "babel-plugin-styled-components": "^1.10.7",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",

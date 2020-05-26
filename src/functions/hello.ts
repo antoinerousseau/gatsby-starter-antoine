@@ -10,7 +10,7 @@ export const handler = async (request: APIGatewayProxyEvent): Promise<APIGateway
       throw new HttpError(400, "Method not supported")
     }
 
-    return respond(200)
+    return respond(200, { message: "Hello, World!" })
   } catch (error) {
     return handleError(error)
   }

@@ -51,8 +51,8 @@ const request = async <T>(method: string, url: string, params?: Payload | Query)
 
 export default {
   request,
-  get: <T = any>(path: string, params?: Query) => request<T>("GET", path, params),
-  post: <T = any>(path: string, params: Payload) => request<T>("POST", path, params),
-  put: <T = any>(path: string, params: Payload) => request<T>("PUT", path, params),
-  delete: <T = any>(path: string, params: Payload) => request<T>("DELETE", path, params),
+  get: <T = unknown>(path: string, params?: Query) => request<T>("GET", path, params),
+  post: <T = unknown>(path: string, params: Payload) => request<T>("POST", path, params),
+  put: <T = unknown>(path: string, params: Payload) => request<T>("PUT", path, params),
+  delete: <T = unknown>(path: string, params: Payload) => request<T>("DELETE", path, params),
 }
