@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "src/layout"
 import Image from "src/components/Image"
 
-const Home: GatsbyPage = () => (
+const HomePage: GatsbyPage = () => (
   <Layout title="Home">
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -16,4 +16,4 @@ const Home: GatsbyPage = () => (
   </Layout>
 )
 
-export default Home
+export default HomePage
