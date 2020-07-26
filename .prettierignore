@@ -1,4 +1,5 @@
-.cache
+.cache/
 package.json
 package-lock.json
-public
+/public
+/functions

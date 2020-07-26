@@ -14,6 +14,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-no-target-blank": ["error", { allowReferrer: true }],
+    "no-shadow": "error",
   },
   settings: {
     react: {

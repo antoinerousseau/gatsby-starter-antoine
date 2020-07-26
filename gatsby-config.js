@@ -1,5 +1,7 @@
 require("dotenv").config()
-require("ts-node").register()
+require("ts-node").register({
+  files: true, // to that TS node hooks have access to local typings too
+})
 
 const { createProxyMiddleware } = require("http-proxy-middleware")
 
