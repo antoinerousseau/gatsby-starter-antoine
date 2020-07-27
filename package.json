@@ -30,7 +30,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "build": "gatsby clean && gatsby build && netlify-lambda build src/functions --config webpack.functions.js",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \" && exit 1",
+    "clean": "gatsby clean"
   },
   "engines": {
     "node": ">=10.12.0"

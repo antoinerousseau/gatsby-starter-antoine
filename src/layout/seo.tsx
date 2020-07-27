@@ -21,7 +21,6 @@ const SEO: React.FC<Props> = ({ title, noindex, description, url, image }) => {
           description
           locale
           keywords
-          siteUrl
         }
       }
     }
