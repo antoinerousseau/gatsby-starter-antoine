@@ -1,6 +1,6 @@
 require("dotenv").config()
 require("ts-node").register({
-  files: true, // to that TS node hooks have access to local typings too
+  files: true, // so that TS node hooks have access to local typings too
 })
 
 if (!process.env.GATSBY_BUGSNAG) {
