@@ -24,7 +24,7 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
     cd [name]
     cp {example,}.env
 
-And configure your site infos in `package.json` and `gatsby-config.js`.
+And configure your site infos in `package.json` and `src/gatsby/config.ts`.
 
 ## Commands
 
