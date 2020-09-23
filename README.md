@@ -7,7 +7,6 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
 - [Hot reloading](https://github.com/hot-loader/react-dom)
 - [TypeScript](https://www.typescriptlang.org/) & Gatsby types
 - [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
-- [Netlify](https://www.netlify.com/) config (including TypeScript Netlify functions)
 - [Bugsnag](https://www.bugsnag.com/)
 - [Styled Components](https://styled-components.com/)
  - `src` [import alias](https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9)
@@ -29,7 +28,12 @@ And configure your site infos in `package.json` and `src/gatsby/config.ts`.
 ## Commands
 
 - `yarn develop`: start development mode
-- `yarn lambda`: start Netlify functions in development mode
 - `yarn lint`: check linting (Eslint + Prettier)
 - `yarn build`: make production bundle
 - `yarn serve`: locally serve production bundle
+
+## Netlify
+
+You can also directly have a TypeScript-ready [Netlify](https://www.netlify.com/) setup, including Netlify functions (lambdas), by using the `netlify` branch, e.g.:
+
+    gatsby new [name] https://github.com/antoinerousseau/gatsby-starter-antoine#netlify

@@ -1,7 +1,6 @@
 import type { GatsbyConfig } from "gatsby"
 
 import path from "path"
-import { createProxyMiddleware } from "http-proxy-middleware"
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -46,7 +45,6 @@ const config: GatsbyConfig = {
         displayName: process.env.NODE_ENV === "development",
       },
     },
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -57,17 +55,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-  developMiddleware: (app) => {
-    app.use(
-      "/.netlify/functions/",
-      createProxyMiddleware({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-      })
-    )
-  },
 }
 
 export default config

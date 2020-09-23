@@ -11,8 +11,6 @@ if (!process.env.TZ) {
 }
 
 // we need these in the browser for Bugsnag:
-process.env.GATSBY_DEPLOY_URL = process.env.DEPLOY_URL || "local" // from Netlify
-process.env.GATSBY_RELEASE = process.env.COMMIT_REF || "local" // from Netlify
 process.env.GATSBY_DEPLOY_DATE = new Date().toString()
 
 module.exports = require("./src/gatsby/config").default
