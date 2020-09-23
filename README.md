@@ -9,7 +9,7 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
 - [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
 - [Bugsnag](https://www.bugsnag.com/)
 - [Styled Components](https://styled-components.com/)
- - `src` [import alias](https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9)
+- `src` [import alias](https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9)
 
 ## Requirements
 
@@ -34,6 +34,6 @@ And configure your site infos in `package.json` and `src/gatsby/config.ts`.
 
 ## Netlify
 
-You can also directly have a TypeScript-ready [Netlify](https://www.netlify.com/) setup, including Netlify functions (lambdas), by using the `netlify` branch, e.g.:
+If you use [Netlify](https://www.netlify.com/), you can also directly have a TypeScript-ready setup, including Netlify functions (lambdas), by using [the netlify branch](https://github.com/antoinerousseau/gatsby-starter-antoine/tree/netlify), e.g.:
 
     gatsby new [name] https://github.com/antoinerousseau/gatsby-starter-antoine#netlify
