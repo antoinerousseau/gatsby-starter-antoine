@@ -11,6 +11,7 @@ if (apiKey) {
     enabledReleaseStages: ["production"],
     appVersion: process.env.GATSBY_RELEASE,
     metadata: {
+      deployUrl: process.env.GATSBY_DEPLOY_URL,
       deployDate: process.env.GATSBY_DEPLOY_DATE,
     },
     plugins: [new BugsnagReact(React)],

@@ -10,6 +10,7 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
 - [Bugsnag](https://www.bugsnag.com/)
 - [Styled Components](https://styled-components.com/)
 - `src` [import alias](https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9)
+- [Netlify](https://www.netlify.com/) config (including TypeScript Netlify functions)
 
 ## Requirements
 
@@ -19,7 +20,7 @@ It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-s
 
 ## Usage
 
-    gatsby new [name] https://github.com/antoinerousseau/gatsby-starter-antoine
+    gatsby new [name] https://github.com/antoinerousseau/gatsby-starter-antoine#netlify
     cd [name]
     cp {example,}.env
 
@@ -28,12 +29,7 @@ And configure your site infos in `package.json` and `src/gatsby/config.ts`.
 ## Commands
 
 - `yarn develop`: start development mode
+- `yarn lambda`: start Netlify functions in development mode
 - `yarn lint`: check linting (Eslint + Prettier)
 - `yarn build`: make production bundle
 - `yarn serve`: locally serve production bundle
-
-## Netlify
-
-If you use [Netlify](https://www.netlify.com/), you can also directly have a TypeScript-ready setup, including Netlify functions (lambdas), by using [the netlify branch](https://github.com/antoinerousseau/gatsby-starter-antoine/tree/netlify), e.g.:
-
-    gatsby new [name] https://github.com/antoinerousseau/gatsby-starter-antoine#netlify
