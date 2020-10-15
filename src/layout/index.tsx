@@ -5,7 +5,9 @@ import SEO, { Props as SEOProps } from "./seo"
 import Header from "./header"
 import Footer from "./footer"
 
-const Main = styled.main``
+const Main = styled.main`
+  padding: 1em;
+`
 
 const Layout: React.FC<SEOProps> = ({ children, ...props }) => (
   <>
