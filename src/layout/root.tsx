@@ -1,16 +1,9 @@
 import type { GatsbyBrowser } from "gatsby"
 
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
-import normalize from "./normalize"
-import style from "./style"
 import { ErrorBoundary } from "src/helpers/bugsnag"
-
-const GlobalStyles = createGlobalStyle`
-  ${normalize}
-  ${style}
-`
 
 const ErrorContainer = styled.div`
   padding: 40px 20px;
@@ -40,12 +33,7 @@ const ErrorComponent: React.FC<FallbackProps> = () => (
 const Root: GatsbyBrowser["wrapRootElement"] = ({ element }) => {
   // This wrapper is mounted once and does not re-render on page change
   // https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement
-  return (
-    <>
-      <GlobalStyles />
-      {ErrorBoundary ? <ErrorBoundary FallbackComponent={ErrorComponent}>{element}</ErrorBoundary> : element}
-    </>
-  )
+  return ErrorBoundary ? <ErrorBoundary FallbackComponent={ErrorComponent}>{element}</ErrorBoundary> : element
 }
 
 export default Root
