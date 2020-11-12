@@ -1,8 +1,6 @@
 import type { GatsbyBrowser } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
-import React from "react"
-
 import normalize from "./normalize"
 import style from "./style"
 

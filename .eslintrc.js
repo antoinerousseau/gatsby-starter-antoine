@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   rules: {
+    "react/react-in-jsx-scope": "off", // because we use the new JSX transform in babel.config.js
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

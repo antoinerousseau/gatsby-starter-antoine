@@ -1,5 +1,3 @@
-import React from "react"
-
 interface Props {
   htmlAttributes?: React.HtmlHTMLAttributes<HTMLHtmlElement>
   headComponents?: React.ReactNode

@@ -1,4 +1,3 @@
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby" // https://www.gatsbyjs.org/docs/use-static-query/
 import Img, { FluidObject } from "gatsby-image" // https://gatsby.dev/gatsby-image
 
