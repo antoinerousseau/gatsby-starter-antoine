@@ -24,7 +24,7 @@
     "url": "https://github.com/antoinerousseau/gatsby-starter-antoine/issues"
   },
   "scripts": {
-    "develop": "gatsby clean && gatsby develop",
+    "develop": "gatsby clean && cross-env GATSBY_HOT_LOADER=fast-refresh gatsby develop",
     "lint": "tsc --skipLibCheck && eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "build": "gatsby clean && gatsby build",
@@ -38,7 +38,6 @@
   "dependencies": {
     "@bugsnag/js": "^7.0.0",
     "@bugsnag/plugin-react": "^7.0.0",
-    "@hot-loader/react-dom": "^17.0.0",
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
