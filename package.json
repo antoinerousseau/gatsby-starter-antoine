@@ -23,7 +23,7 @@
     "url": "https://github.com/antoinerousseau/gatsby-starter-antoine/issues"
   },
   "scripts": {
-    "develop": "gatsby clean && cross-env GATSBY_HOT_LOADER=fast-refresh gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "lint": "tsc --skipLibCheck && eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "build": "gatsby clean && gatsby build",
@@ -48,7 +48,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "eslint": "^7.1.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.2",
