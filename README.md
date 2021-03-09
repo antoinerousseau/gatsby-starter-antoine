@@ -4,7 +4,6 @@ My opinionated [Gatsby.js](https://www.gatsbyjs.org/) starter template.
 
 It starts from [the default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default), and adds:
 
-- [Hot reloading](https://github.com/gatsbyjs/gatsby/pull/26664) with [fast-refresh](https://reactnative.dev/docs/fast-refresh)
 - [TypeScript](https://www.typescriptlang.org/) & Gatsby types
 - [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
 - [Bugsnag](https://www.bugsnag.com/)
