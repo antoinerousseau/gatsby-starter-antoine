@@ -57,7 +57,7 @@
     "gatsby-plugin-google-analytics": "^2.2.3",
     "gatsby-plugin-manifest": "^2.3.4",
     "gatsby-plugin-react-helmet": "^3.2.3",
-    "gatsby-plugin-sharp": "^2.5.5",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-styled-components": "^3.2.2",
     "gatsby-plugin-typescript": "^2.3.2",
     "gatsby-source-filesystem": "^2.2.3",
